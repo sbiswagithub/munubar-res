@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fafafa;
+}
+nav{
+    margin:3% auto;
+    height: 80px;
+    width: 90%;
+    background-color: #fff;
+    color: #333333;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+.left a{
+    font-weight: 600;
+}
+
+nav a{
+    color: #333333;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.list{
+display: flex;
+list-style: none;
+text-transform: capitalize;
+}
+.list li{
+    margin-left:20px
+}
+
+.active{
+    color: rgb(5, 223, 38);
+}
+.list a:hover{
+ color: rgb(5, 223, 38); 
+ 
+}
+#check{
+    display: none;
+}
+#toggle{
+    display: none;
+}
+
+@media(max-width:800px){
+    #check{
+    display: inline;
+}
+nav{
+    justify-content: space-between;
+}
+
+.list{
+    flex-direction: column;
+    height: max-content;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 80px;
+    text-align: left;
+    transition: all 0.5s;
+    transform: scaleY(0);
+    transform-origin: top;
+    box-shadow: 0px 5px 20px -17px rgba(0,0,0,0.34);
+    padding: 20px;
+
+
+}
+.list li{
+    margin: 20px 0;
+}
+/* tilde symbol to target next sibling */
+#toggle:checked ~ .list{
+    transform: scaleY(1);
+}
+
+}
+
+
